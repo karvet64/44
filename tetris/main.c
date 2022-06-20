@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <math.h>
-#define sh 20
+#define sh 24
 #define vi 25
 #define PI 3.14159265
 int sc=0;
