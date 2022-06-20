@@ -6,3 +6,9 @@ void setcur(int x,int y)
     coord.Y=y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);
 }
+int main()
+{
+
+setcur(1,1);
+setcur(2,2);
+}
