@@ -1,0 +1,6 @@
+int main()
+{
+    float z=360;
+    int q=(int)round(sin(z*PI/180));
+   printf("%d",q);
+}
