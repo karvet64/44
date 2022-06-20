@@ -1,0 +1,39 @@
+git --version  //версия
+git config --global user.name "Alex"  //ввод
+git config --global user.email "karvet64@outlook.com"  //ввод
+без global только на директорию
+git config user.name  //
+git config user.email //проверка
+cd /d/my_GIT/  //дир
+git init  //ини дир
+ ll //содер
+ ll --all //всё содер
+cd .git //след дир
+cd ..  //пред дир
+vim main.c //текст ред ->insert->esc->:wq
+car main.c //просмотр
+
+git status //инфа
+
+git add main.c //в отслеживаемые
+git add *.c  //в отслеживаемые
+git add . //все в отслеживаемые
+
+git commit -m "coment" //с ком
+
+git remote add origin https://github.com/karvet64/44.git    //подключ удалённый реп
+git remote -v //проверка что подключено
+git push origin master  //откомиченные на удалённый
+git push -u origin master //делаем origin master по умолчанию
+git push //по умолчанию
+git fetch origin //с удалённого в .git без раб дир
+git merge origin/master // из .git в раб дир
+git pull //с удалённого в .git и раб дир
+git clone https://github.com/karvet64/44.git /d/zopa/  //клонирование
+vim .gitignore //вносим ->insert->esc->:wq
+cat .gitignore //смотрим
+git log //история выход q
+git log -p //подробно
+gitk //наглядно измен
+git reset HEAD zopa.c //убрать из отслеживаемых
+git restore zopa.c//убрать изменения в zopa.c
