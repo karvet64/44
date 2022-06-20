@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1649412006 source:d:\ccccc\cb\tetris\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<math.h>
+
