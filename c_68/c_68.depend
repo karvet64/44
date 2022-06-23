@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1653806201 source:d:\my_git\c_68\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<windows.h>
+	<math.h>
+
