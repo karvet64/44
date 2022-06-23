@@ -23,13 +23,14 @@ typedef struct
     float speed;
 } TBall;
 char lvlMap[height][width];
+
 boolean run = FALSE;
 char mas[height][width+1];
 TRacket racket;
 TBall ball;
 int hitCnt = 0;
 int maxHitCnt = 0;
-int lvl = 1;
+int lvl = 2;
 
 void initBall()
 {
@@ -100,31 +101,39 @@ void putRacket()
         mas[racket.y][i] = '@';
 }
 
-void init(int lvl)
+void lvlMapPuzzile(int lvl)
 {
-    for(int i=0; i<width; i++)
-        mas[0][i] = '#';
-    mas[0][width] = '\0';
 
-    strncpy(mas[1], mas[0], width+1);
-    for(int i=1; i<width-1; i++)
-        mas[1][i] = ' ';
-
-    for(int i=2; i<height; i++)
-        strncpy(mas[i], mas[1], width+1);
 
     if (lvl == 2)
         for(int i=20; i<50; i++)
-            mas[10][i] = '#';
+            lvlMap[10][i] = '#';
 
     if (lvl == 3)
     {
         for (int j=1; j<10; j++)
             for (int i=1; i<65; i+=7)
-                mas[j][i] = '#';
+      {
+            lvlMap[j][i] = '#';
+      }
     }
-}
 
+}
+void lvlMapInit(int lvl)
+{
+    memset(lvlMap,' ',sizeof(lvlMap));
+    lvlMapPuzzile(lvl);
+    for(int i=0;i<width;i++)
+        lvlMap[0][i]='#';
+        for(int j=0;j<height;j++)
+            lvlMap[j][0]=lvlMap[j][width-1]='#';
+}
+void lvlMapPut()
+{
+    memset(mas,0,sizeof(mas));
+    for(int j=0;j<height;j++)
+        memcpy(mas[j],lvlMap[j],sizeof(**lvlMap)*width);
+}
 void show()
 {
     setcur(0,0);
@@ -201,7 +210,7 @@ int main()
 
     initRacket();
     initBall();
-
+    lvlMapInit(lvl);
     ShowPreview();
 
     do
@@ -212,8 +221,7 @@ int main()
         CheckFaild();
 
         CheckWin();
-
-        init(lvl);
+        lvlMapPut();
         putRacket();
         putBall();
         show();
