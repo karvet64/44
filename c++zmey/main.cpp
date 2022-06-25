@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <cstring>
 #include <cstdio>
+
 using namespace std;
 void MoveXY(int x,int y)
 {

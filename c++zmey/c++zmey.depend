@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1656155683 source:d:\my_git\c++zmey\main.cpp
+	<iostream>
+	<windows.h>
+	<cstring>
+	<cstdio>
+
