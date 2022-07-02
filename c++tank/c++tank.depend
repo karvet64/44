@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1656430233 source:d:\my_git\c++tank\main.cpp
+	<iostream>
+	<cstring>
+	<windows.h>
+	<ctime>
+

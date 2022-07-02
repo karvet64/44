@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1656674781 source:d:\my_git\c++tetric\main.cpp
+	<iostream>
+	<windows.h>
+	<cstdlib>
+	<ctime>
+	<cstdio>
+	<cstring>
+
