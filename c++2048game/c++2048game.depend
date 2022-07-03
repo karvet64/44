@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1656841891 source:d:\my_git\c++2048game\main.cpp
+	<iostream>
+	<windows.h>
+	<cstdio>
+	<cmath>
+
